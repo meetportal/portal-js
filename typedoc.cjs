@@ -5,6 +5,7 @@ module.exports = {
   hideGenerator: true,
   excludePrivate: true,
   sidebarLinks: {
+    Github: 'https://github.com/meetportal/portal-js',
     Website: 'https://meetportal.com',
     'Developer Console': 'https://marketplace.meetportal.com/developer',
     'Getting Started': '#',

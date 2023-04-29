@@ -1,4 +1,4 @@
-![Portal Banner](https://portal-js.meetportal.com/media/portal_banner.png)
+![Portal Banner](https://meetportal.github.io/portal-js/media/portal_banner.png)
 
 ## What is Portal?
 
@@ -22,7 +22,7 @@ This means you can integrate once into Portal and support multiple environments 
 
 Portal JS provides functionality for web applications integrating into Portal.
 
-[Portal JS API Documentation](https://portal-js.meetportal.com/) can be found here
+[Portal JS API Documentation](https://meetportal.github.io/portal-js/) can be found here
 
 ### Installation
 
