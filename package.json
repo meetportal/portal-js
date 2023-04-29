@@ -1,0 +1,36 @@
+{
+  "name": "@meetportal/portal-js",
+  "version": "0.3.3",
+  "type": "module",
+  "homepage": "https://portal-js.meetportal.com",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/portal.umd.cjs",
+  "module": "./dist/portal.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./dist/portal.js",
+      "require": "./dist/portal.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:d": "tsc src/*.ts --declaration --emitDeclarationOnly --declarationDir dist/",
+    "docs": "typedoc --options typedoc.cjs src/main.ts && npm run copy:favicons",
+    "copy:favicons": "cp -r ./favicon ./docs/favicon",
+    "npm:publish": "npm publish --access public",
+    "npm:dry-run": "npm publish --dry-run"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-dts": "^1.7.2"
+  },
+  "dependencies": {
+    "typedoc": "^0.23.28"
+  }
+}
