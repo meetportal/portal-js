@@ -32,14 +32,13 @@ The recommended way for using Portal is to install it directly into your applica
 npm install @meetportal/portal-js
 ```
 
-<!--
 ### CDN
 
 If you prefer, you can add Portal JS as a script in the head of your HTML page. You won't get the autocompletion as you would if you installed it directly into your application.
 
 ```html
-<script src="https://jsdelivr.com/@meetportal/portal.js"></script>
-``` -->
+<script src="https://cdn.jsdelivr.net/npm/@meetportal/portal-js@latest/dist/portal.iife.js"></script>
+```
 
 ## Quick start
 
