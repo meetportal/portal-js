@@ -8,7 +8,7 @@ Portal is an **Operating System as a Service (OSaaS)** that runs on top of an ap
 
 Portal handles the complexities of integrating into hosting applications for multiple industries. Portal integrates into primary applications for
 
-- HealthCare (EMR/EHR)
+- [HealthCare (EMR/EHR)](https://meetportal.github.io/healthcare-js/)
 - DentalCare (EDR)
 - Education (SIS)
 - Insurance (InsurTech)
@@ -26,7 +26,7 @@ Portal JS provides functionality for web applications integrating into Portal.
 
 ### Installation
 
-The recommended way for using Portal is to install it directly into your application. It has a small footprint of ~5k (~2k gzip).
+The recommended way for using Portal is to install it directly into your application.
 
 ```bash
 npm install @meetportal/portal-js

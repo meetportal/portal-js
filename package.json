@@ -1,8 +1,12 @@
 {
   "name": "@meetportal/portal-js",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "type": "module",
-  "homepage": "https://portal-js.meetportal.com",
+  "homepage": "https://meetportal.github.io/portal-js/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meetportal/portal-js"
+  },
   "files": [
     "dist",
     "index.d.ts"
