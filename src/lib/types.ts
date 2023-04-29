@@ -20,7 +20,7 @@ export interface PortalBase {
   setBadge: (options?: Badge) => Promise<void>
   getSession: () => Promise<Session>
   // getResource: (type?: string) => Promise<Resource>
-  pushNotification: (notification: Notification) => Promise<void>
+  pushNotification: (notification: NotificationMessage) => Promise<void>
   clearNotifications: (filters?: { groupId?: string; externalId?: string }) => Promise<void>
   setStoreItem: (key: string, value: any, options?: StoreOptions) => Promise<void>
   getStoreItem: (key: string, options?: StoreOptions) => Promise<any>
@@ -28,7 +28,7 @@ export interface PortalBase {
   // event handlers
   onSessionChange: (callback: (session: Session) => void) => () => void
   onUserChange: (callback: (user: User) => void) => () => void
-  onResourceChange: (filter: string, callback: (resource: Resource) => void) => () => void
+  onResourceChange: (filter: string, callback: (resource: any) => void) => () => void
   onMessage: (callback: (message?: Message) => void) => () => void
 }
 
@@ -59,7 +59,7 @@ export interface PortalClient extends PortalBase {
 /**
  * Represents the user authenticated in the application
  */
-export type User = {
+export interface User {
   /**
    * Unique identifier for the user. May be an id, email, or other unique identifier
    */
@@ -91,7 +91,7 @@ export type User = {
 /**
  * Represents the Portal session and user
  */
-export type Session = {
+export interface Session {
   /**
    * Unique identifier for the session
    */
@@ -137,13 +137,13 @@ export type Session = {
   mobile?: string
 }
 
-export type Resource = {
+export interface Resource {
   id: string
   type: string
   data?: any
 }
 
-export type Message = {
+export interface Message {
   /**
    * Unique identifier for the message. Generated ID. Do not set. It will be overwritten.
    * If you need to track a message, use the externalId property.
@@ -155,15 +155,25 @@ export type Message = {
   data?: any
 }
 
-export type Notification = {
-  externalId?: string
-  groupId?: string
+export interface NotificationMessage extends Message {
+  type: 'app' | 'system'
   title: string
   text: string
-  data?: any
+  /**
+   * Automatically populated by the Portal. Do not set. It will be overwritten.
+   */
+  iconUrl?: string
+  createdAt: Date
 }
+// {
+//   externalId?: string
+//   groupId?: string
+//   title: string
+//   text: string
+//   data?: any
+// }
 
-export type Badge = {
+export interface Badge {
   /**
    * Indicates whether the badge should be visible or not
    */
@@ -178,7 +188,7 @@ export type Badge = {
   text?: string
 }
 
-export type Workspace = {
+export interface Workspace {
   id: string
   name: string
 }

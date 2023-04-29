@@ -1,5 +1,5 @@
 import { APP, NOTIFICATION, RESOURCE, SESSION, STORE, SYSTEM, USER } from './consts'
-import { Badge, Message, Notification, PortalClient, Resource, Session, User } from './types'
+import { Badge, Message, NotificationMessage, PortalClient, Session, User } from './types'
 import { CONNECTION, OFF } from '@orango/beam-client'
 import { inPortal, isWorker } from './helpers'
 
@@ -229,7 +229,7 @@ export class Client implements PortalClient {
   /**
    * Sends a notification to the portal. Portal will display the notification to the user.
    */
-  pushNotification = (message: Notification) => {
+  pushNotification = (message: NotificationMessage) => {
     return this.sendRequest(NOTIFICATION.PUSH, message)
   }
 
@@ -350,7 +350,7 @@ export class Client implements PortalClient {
    * @param callback
    * @returns
    */
-  onResourceChange = (filter = '*', callback: (resource: Resource) => void) => {
+  onResourceChange = (filter = '*', callback: (resource: any) => void) => {
     return this.subscribe(RESOURCE.ON_CHANGE, filter, callback)
   }
 

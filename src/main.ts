@@ -17,7 +17,7 @@ export { usePortalService } from './lib/usePortalService'
 export type {
   Badge,
   Message,
-  Notification,
+  NotificationMessage,
   PortalBase,
   PortalClient,
   PortalService,
