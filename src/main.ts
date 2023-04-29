@@ -18,6 +18,7 @@ export type {
   Badge,
   Message,
   Notification,
+  PortalBase,
   PortalClient,
   PortalService,
   Resource,
