@@ -1,7 +1,8 @@
 import { APP, NOTIFICATION, RESOURCE, SESSION, STORE, SYSTEM, USER } from './consts'
 import { Badge, Message, NotificationMessage, PortalClient, Session, User } from './types'
-import { CONNECTION, OFF } from '@orango/beam-client'
 import { inPortal, isWorker } from './helpers'
+
+import { CONNECTION } from '@orango/beam-client'
 
 const VERSION = __APP_VERSION__
 
@@ -158,7 +159,7 @@ export class Client implements PortalClient {
     return () => {
       this.#eventHandlers.delete(id)
       setTimeout(() => {
-        this.postMessage({ id, path: OFF + '.' + event, args: [filter] })
+        this.postMessage({ id, path: 'off.' + event, args: [filter] })
       }, 0)
     }
   }
