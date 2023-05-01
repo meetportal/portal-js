@@ -1,7 +1,10 @@
-import { ELEMENT, RESOURCE, SYSTEM, USER } from './consts'
 import { Message, PortalService, Resource, User } from './types'
 
 import { Client } from './PortalClient'
+import { ELEMENT } from '@orango/beam-client'
+import { RESOURCE } from './consts/resource'
+import { SYSTEM } from './consts/system'
+import { USER } from './consts/user'
 
 export class Service extends Client implements PortalService {
   constructor(ctx: any, options?: { requestTimeout?: number }) {
@@ -12,12 +15,6 @@ export class Service extends Client implements PortalService {
     const path = typeof queryPath === 'string' ? queryPath : queryPath.toString()
     const result = await this.sendRequest(ELEMENT.QUERY, path)
     return result
-  }
-
-  $ = (html: string) => {
-    const hostProxy = new Proxy(() => {}, {})
-    const via = this.generatePathFromProxy(hostProxy)
-    return via.$(html) as Document
   }
 
   openApp = (appId: string, message?: any) => {

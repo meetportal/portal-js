@@ -1,8 +1,14 @@
-import { APP, NOTIFICATION, RESOURCE, SESSION, STORE, SYSTEM, USER } from './consts'
 import { Badge, Message, NotificationMessage, PortalClient, Session, User } from './types'
+import { CONNECTION, uuid } from '@orango/beam-client'
 import { inPortal, isWorker } from './helpers'
 
-import { CONNECTION } from '@orango/beam-client'
+import { APP } from './consts/app'
+import { NOTIFICATION } from './consts/notification'
+import { RESOURCE } from './consts/resource'
+import { SESSION } from './consts/session'
+import { STORE } from './consts/store'
+import { SYSTEM } from './consts/system'
+import { USER } from './consts/user'
 
 const VERSION = __APP_VERSION__
 
@@ -25,7 +31,7 @@ export class Client implements PortalClient {
       this.#requestTimeout = options.requestTimeout || 0
     }
 
-    this.id = this.uuid()
+    this.id = uuid()
 
     this.#ctx = ctxSender
 
@@ -54,18 +60,18 @@ export class Client implements PortalClient {
     return this.sendRequest(SYSTEM.OPEN_APP, { appId, message })
   }
 
-  /**
-   * Generates a random UUID. Used to identify requests and events.
-   * @returns
-   * @hidden
-   */
-  uuid = () => {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-      var r = (Math.random() * 16) | 0,
-        v = c == 'x' ? r : (r & 0x3) | 0x8
-      return v.toString(16)
-    })
-  }
+  // /**
+  //  * Generates a random UUID. Used to identify requests and events.
+  //  * @returns
+  //  * @hidden
+  //  */
+  // uuid = () => {
+  //   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+  //     var r = (Math.random() * 16) | 0,
+  //       v = c == 'x' ? r : (r & 0x3) | 0x8
+  //     return v.toString(16)
+  //   })
+  // }
 
   /**
    * All requests to the portal are sent as a batch. This method is used to create a
@@ -138,7 +144,7 @@ export class Client implements PortalClient {
    * defined in the portal-js library.
    */
   sendRequest = async (path: string, ...args: any[]) => {
-    const id = this.uuid()
+    const id = uuid()
     this.#batch({ id, path, version: VERSION, args })
     return this.#createPromise(id, path)
   }
@@ -153,7 +159,7 @@ export class Client implements PortalClient {
    * @returns
    */
   subscribe = (event: string, filter = '*', callback: any) => {
-    const id = this.uuid()
+    const id = uuid()
     this.#eventHandlers.set(id, callback)
     this.#batch({ id, version: VERSION, path: 'on.' + event, args: [filter] })
     return () => {

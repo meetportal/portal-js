@@ -4,7 +4,6 @@ export interface StoreOptions {
 }
 
 export interface PortalBase {
-  uuid: () => string
   echo: (message: string) => Promise<string>
   /**
    * Experimental and subject to change.
@@ -34,7 +33,6 @@ export interface PortalBase {
 
 export interface PortalService extends PortalBase {
   query: (val: any) => Promise<string>
-  $: (html: string) => Document
   setResource: (resource: Resource) => Promise<void>
   clearResource(type: string): Promise<void>
   setUser: (appUser?: User) => Promise<void>
