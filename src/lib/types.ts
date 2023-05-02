@@ -63,10 +63,15 @@ export interface User {
    */
   id: string
   /**
-   * Represents a unique identifier for a company, subdomain, or
-   * other entity that can be use to map an app user to a portal user
+   * Represents a unique identifier for a team, organization, company, tenant, etc.
+   * This might be found as subdomain, org company, or other unique identifier.
+   * This identifier does not change for a user. But a user may belong to multiple groups.
+   *
+   * If it is a generic web app, it may not have a group. Example: social media website.
+   *
+   * The group is used to identify and connect the user.
    */
-  workspace: string
+  group?: string
   /**
    * Provided if available
    * Example: jane.doe
@@ -77,13 +82,6 @@ export interface User {
    * Example: jane.doe@mail.com
    */
   email?: string
-  /**
-   * Represents the hostname of the site the user is on
-   * Example: mysite.com
-   * Example: mysite.com:8080
-   * Example: subdomain.mysite.com
-   */
-  hostname: string
 }
 
 /**
@@ -113,6 +111,12 @@ export interface Session {
    * Example: localhost
    */
   hostname: string
+  /**
+   * Represents a unique identifier for a team, organization, company, tenant, etc.
+   * This might be found as subdomain, org company, or other unique identifier.
+   * This identifier does not change for a user. But a user may belong to multiple groups.
+   */
+  group?: string
   /**
    * The portal user id
    */
