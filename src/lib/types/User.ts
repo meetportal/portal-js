@@ -15,7 +15,7 @@ export interface User {
    *
    * The group is used to identify and connect the user.
    */
-  group?: string
+  groupId?: string
   /**
    * Provided if available
    * Example: jane.doe

@@ -1,6 +1,6 @@
 import { APP } from './consts/app'
 import { Base } from './PortalBase'
-import { PortalClient } from './types'
+import { PortalClient } from './types/PortalClient'
 
 export class Client extends Base implements PortalClient {
   /**

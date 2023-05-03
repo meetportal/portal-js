@@ -1,14 +1,19 @@
-import { Badge, Message, NotificationMessage, PortalBase, Session, User } from './types'
 import { CONNECTION, uuid } from '@orango/beam-client'
 import { inPortal, isWorker } from './helpers'
 
 import { APP } from './consts/app'
+import { Badge } from './types/Badge'
+import { Message } from './types/Message'
 import { NOTIFICATION } from './consts/notification'
+import { NotificationMessage } from './types/NotificationMessage'
+import { PortalBase } from './types/PortalBase'
 import { RESOURCE } from './consts/resource'
 import { SESSION } from './consts/session'
 import { STORE } from './consts/store'
 import { SYSTEM } from './consts/system'
+import { Session } from './types/Session'
 import { USER } from './consts/user'
+import { User } from './types/User'
 
 const VERSION = __APP_VERSION__
 

@@ -1,5 +1,5 @@
 import { Client } from './PortalClient'
-import { PortalClient } from './types'
+import { PortalClient } from './types/PortalClient'
 
 let portalClient: PortalClient
 

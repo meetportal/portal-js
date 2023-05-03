@@ -1,10 +1,12 @@
-import { Message, PortalService, Resource, User } from './types'
-
 import { Base } from './PortalBase'
 import { ELEMENT } from '@orango/beam-client'
+import { Message } from './types/Message'
+import { PortalService } from './types/PortalService'
 import { RESOURCE } from './consts/resource'
+import { Resource } from './types/Resource'
 import { SYSTEM } from './consts/system'
 import { USER } from './consts/user'
+import { User } from './types/User'
 
 export class Service extends Base implements PortalService {
   constructor(ctx: any, options?: { requestTimeout?: number }) {

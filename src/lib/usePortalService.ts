@@ -1,4 +1,4 @@
-import { PortalService } from './types'
+import { PortalService } from './types/PortalService'
 import { Service } from './PortalService'
 import { isWorker } from './helpers'
 
