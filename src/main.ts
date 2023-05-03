@@ -1,19 +1,18 @@
 export { inPortal } from './lib/helpers'
 export { usePortalClient } from './lib/usePortalClient'
 export { usePortalService } from './lib/usePortalService'
-export type {
-  Badge,
-  Message,
-  NotificationMessage,
-  PortalBase,
-  PortalClient,
-  PortalService,
-  Resource,
-  Session,
-  Workspace,
-  User,
-  StoreOptions,
-} from './lib/types'
+
+export type { Badge } from './lib/types/Badge'
+export type { Message } from './lib/types/Message'
+export type { NotificationMessage } from './lib/types/NotificationMessage'
+export type { PortalBase } from './lib/types/PortalBase'
+export type { PortalClient } from './lib/types/PortalClient'
+export type { PortalService } from './lib/types/PortalService'
+export type { Resource } from './lib/types/Resource'
+export type { Session } from './lib/types/Session'
+export type { StoreOptions } from './lib/types/StoreOptions'
+export type { User } from './lib/types/User'
+export type { Workspace } from './lib/types/Workspace'
 
 export const VERSION = __APP_VERSION__
 export { $, connectToTarget, uuid } from '@orango/beam-client'
