@@ -4,7 +4,10 @@ export interface Message {
    * If you need to track a message, use the externalId property.
    */
   id?: string
-  appId: string
+  /**
+   * Determines the destination of the message. Generally, this is automatically set by the Portal.
+   */
+  appId?: string
   externalId?: string
   groupId?: string
   data?: any
