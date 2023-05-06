@@ -24,8 +24,9 @@ export class Base implements PortalBase {
   #requests: Map<string, any> = new Map()
   #eventHandlers: Map<string, any> = new Map()
   #requestTimeout = 0
-  #ORIGIN = '*'
+  #postMessageOrigin = '*'
   #ctx: any
+  #issuer = 'portal'
 
   /**
    *
@@ -102,7 +103,7 @@ export class Base implements PortalBase {
    * @returns
    * @hidden
    */
-  #batch = async (params: { id: string; path: string; version: string; args: any[] }) => {
+  #batch = async (params: { id: string; issuer: string; path: string; version: string; args: any[] }) => {
     this.#batchMessages.push(params)
     clearTimeout(this.#batchTimer)
 
@@ -123,7 +124,7 @@ export class Base implements PortalBase {
     if (isWorker) {
       this.#ctx.postMessage(message)
     } else if (inPortal) {
-      this.#ctx.postMessage(message, this.#ORIGIN)
+      this.#ctx.postMessage(message, this.#postMessageOrigin)
     }
   }
 
@@ -137,7 +138,7 @@ export class Base implements PortalBase {
    */
   sendRequest = async (path: string, ...args: any[]) => {
     const id = uuid()
-    this.#batch({ id, path, version: VERSION, args })
+    this.#batch({ id, issuer: this.#issuer, path, version: VERSION, args })
     return this.#createPromise(id, path)
   }
 
@@ -153,7 +154,7 @@ export class Base implements PortalBase {
   subscribe = (event: string, filter = '*', callback: any) => {
     const id = uuid()
     this.#eventHandlers.set(id, callback)
-    this.#batch({ id, version: VERSION, path: 'on.' + event, args: [filter] })
+    this.#batch({ id, issuer: this.#issuer, version: VERSION, path: 'on.' + event, args: [filter] })
     return () => {
       this.#eventHandlers.delete(id)
       setTimeout(() => {
