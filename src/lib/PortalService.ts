@@ -13,32 +13,61 @@ export class Service extends Base implements PortalService {
     super(ctx, ctx, options)
   }
 
+  /**
+   * Performs an query against the DOM
+   * @param queryPath
+   * @returns
+   */
   query = async (queryPath: any) => {
     const path = typeof queryPath === 'string' ? queryPath : queryPath.toString()
     const result = await this.sendRequest(ELEMENT.QUERY, path)
     return result
   }
 
+  /**
+   * Opens an application
+   * @param appId  Application ID to open
+   * @param message  Data to send to the application
+   * @returns
+   */
   openApp = (appId: string, message?: any) => {
     return this.sendRequest(SYSTEM.OPEN_APP, { appId, message })
   }
 
+  /**
+   * Sets a resource that can be used by a service or application.
+   * @param resource  Resource to set
+   */
   setResource = (resource: Resource) => {
     return this.sendRequest(RESOURCE.SET_RESOURCE, resource)
   }
 
+  /**
+   * Clears a resource that can be used by a service or application.
+   * @param type  Type of resource to clear
+   */
   clearResource = (type: string) => {
     return this.sendRequest(RESOURCE.CLEAR_RESOURCE, type)
   }
 
+  /**
+   * Sets the current user. in the host application
+   */
   setUser = (user?: User) => {
     return this.sendRequest(USER.SET_USER, user)
   }
 
+  /**
+   * Sends a message to an application.
+   * @param message  Message to send
+   */
   sendMessage = (message: Message) => {
     return this.sendRequest(SYSTEM.SEND_MESSAGE, message)
   }
 
+  /**
+   * @private
+   */
   generatePathFromProxy = (_0: any): any => {
     const pathParts: string[] = []
 
@@ -64,6 +93,10 @@ export class Service extends Base implements PortalService {
     return new Proxy(() => {}, handler)
   }
 
+  /**
+   * Requests permissions from the user to perform an action.
+   * @param permissions  List of permissions to request
+   */
   requestPermissions = (permissions: string[]) => {
     return this.sendRequest(SYSTEM.REQUEST_PERMISSIONS, permissions)
   }

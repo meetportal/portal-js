@@ -1,7 +1,14 @@
 export const NOTIFICATION = {
-  // Methods
+  /**
+   * Pushes a notification to the user
+   */
   PUSH: 'pushNotification',
+  /**
+   * Clears one or more notifications
+   */
   CLEAR: 'clearNotifications',
-  // Events
+  /**
+   * Event emitted when a notification is clicked
+   */
   ON_CLICK: 'notificationClick',
 }

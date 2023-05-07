@@ -66,11 +66,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="clearNotifications.__type.__type-1"><span class="tsd-signature-symbol">(</span>filters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>externalId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>groupId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Clears one or more notifications.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> filters: <span class="tsd-signature-symbol">{ </span><br/><span>    </span>externalId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>groupId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
+<div class="tsd-comment tsd-typography"><p>Filters to apply to the notifications</p>
+</div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter">
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> external<wbr/>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5></li>
@@ -87,6 +91,8 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="disconnect.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Disconnects the application or service from the Portal.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="echo" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>echo</span><a href="#echo" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -114,6 +120,8 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="getSession.__type-6.__type-7"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Session.html" class="tsd-signature-type" data-tsd-kind="Interface">Session</a><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Gets the current session.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Session.html" class="tsd-signature-type" data-tsd-kind="Interface">Session</a><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="getStoreItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Store<wbr/>Item</span><a href="#getStoreItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -125,13 +133,19 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="getStoreItem.__type-8.__type-9"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Gets a value from the Portal store.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>key: <span class="tsd-signature-type">string</span></h5></li>
+<h5>key: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Key to get</p>
+</div></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5>
+<div class="tsd-comment tsd-typography"><p>Options for the store</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="onMessage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Message</span><a href="#onMessage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -143,11 +157,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="onMessage.__type-10.__type-11"><span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">?: </span><a href="Message.html" class="tsd-signature-type" data-tsd-kind="Interface">Message</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Event emitted when a message is received from an application.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5>callback: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">?: </span><a href="Message.html" class="tsd-signature-type" data-tsd-kind="Interface">Message</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>Callback to execute when the event is emitted</p>
+</div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-kind-type-literal">
@@ -176,13 +194,19 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="onResourceChange.__type-14.__type-15"><span class="tsd-signature-symbol">(</span>filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Event emitted when the resource is changed.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>filter: <span class="tsd-signature-type">string</span></h5></li>
+<h5>filter: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Filter to apply to the resource</p>
+</div></li>
 <li>
 <h5>callback: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>Callback to execute when the event is emitted</p>
+</div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-kind-type-literal">
@@ -211,11 +235,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="onSessionChange.__type-18.__type-19"><span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><a href="Session.html" class="tsd-signature-type" data-tsd-kind="Interface">Session</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Event emitted when the session is changed.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5>callback: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><a href="Session.html" class="tsd-signature-type" data-tsd-kind="Interface">Session</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>Callback to execute when the event is emitted</p>
+</div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-kind-type-literal">
@@ -244,11 +272,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="onUserChange.__type-22.__type-23"><span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="User.html" class="tsd-signature-type" data-tsd-kind="Interface">User</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Event emitted when the user is changed.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5>callback: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="User.html" class="tsd-signature-type" data-tsd-kind="Interface">User</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>Callback to execute when the event is emitted</p>
+</div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-kind-type-literal">
@@ -298,11 +330,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="pushNotification.__type-28.__type-29"><span class="tsd-signature-symbol">(</span>notification<span class="tsd-signature-symbol">: </span><a href="NotificationMessage.html" class="tsd-signature-type" data-tsd-kind="Interface">NotificationMessage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Pushes a notification to the user.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>notification: <a href="NotificationMessage.html" class="tsd-signature-type" data-tsd-kind="Interface">NotificationMessage</a></h5></li></ul></div>
+<h5>notification: <a href="NotificationMessage.html" class="tsd-signature-type" data-tsd-kind="Interface">NotificationMessage</a></h5>
+<div class="tsd-comment tsd-typography"><p>Notification to push</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="removeStoreItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Store<wbr/>Item</span><a href="#removeStoreItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -314,13 +350,19 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="removeStoreItem.__type-30.__type-31"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes a value from the Portal store.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>key: <span class="tsd-signature-type">string</span></h5></li>
+<h5>key: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Key to remove</p>
+</div></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5>
+<div class="tsd-comment tsd-typography"><p>Options for the store</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="requestPermissions" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>request<wbr/>Permissions</span><a href="#requestPermissions" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -332,11 +374,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="requestPermissions.__type-32.__type-33"><span class="tsd-signature-symbol">(</span>permissions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Requests permissions from the user to perform an action.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>permissions: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5>permissions: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>List of permissions to request</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="sendRequest" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>send<wbr/>Request</span><a href="#sendRequest" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -348,13 +394,19 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="sendRequest.__type-34.__type-35"><span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sends a request action to the Portal.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>path: <span class="tsd-signature-type">string</span></h5></li>
+<h5>path: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Path or action to send to the Portal</p>
+</div></li>
 <li>
-<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>Arguments to pass to the action</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="setBadge" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Badge</span><a href="#setBadge" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -366,11 +418,15 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="setBadge.__type-36.__type-37"><span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="Badge.html" class="tsd-signature-type" data-tsd-kind="Interface">Badge</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets a badge on the application icon.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="Badge.html" class="tsd-signature-type" data-tsd-kind="Interface">Badge</a></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="Badge.html" class="tsd-signature-type" data-tsd-kind="Interface">Badge</a></h5>
+<div class="tsd-comment tsd-typography"><p>Options for the badge</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="setStoreItem" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Store<wbr/>Item</span><a href="#setStoreItem" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -382,15 +438,23 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="setStoreItem.__type-38.__type-39"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Sets a value in the Portal store.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>key: <span class="tsd-signature-type">string</span></h5></li>
+<h5>key: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Key to set</p>
+</div></li>
 <li>
-<h5>value: <span class="tsd-signature-type">any</span></h5></li>
+<h5>value: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>Value to set</p>
+</div></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> options: <a href="StoreOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">StoreOptions</a></h5>
+<div class="tsd-comment tsd-typography"><p>Options for the store</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"><a id="subscribe" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>subscribe</span><a href="#subscribe" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
@@ -402,15 +466,23 @@
 <ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
 <li class="tsd-signature" id="subscribe.__type-40.__type-41"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Subscribes to an event from the Portal.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>event: <span class="tsd-signature-type">string</span></h5></li>
+<h5>event: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Event to subscribe to</p>
+</div></li>
 <li>
-<h5>filter: <span class="tsd-signature-type">string</span></h5></li>
+<h5>filter: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Filter to apply to the event</p>
+</div></li>
 <li>
-<h5>callback: <span class="tsd-signature-type">any</span></h5></li></ul></div>
+<h5>callback: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>Callback to execute when the event is emitted</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">

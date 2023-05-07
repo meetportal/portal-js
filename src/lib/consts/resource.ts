@@ -1,8 +1,14 @@
 export const RESOURCE = {
-  // Methods
-  // GET_RESOURCE: 'getResource',
+  /**
+   * Sets the resource to be used by the application
+   */
   SET_RESOURCE: 'setResource',
+  /**
+   * Clears the resource
+   */
   CLEAR_RESOURCE: 'clearResource',
-  // Events
+  /**
+   * Event emitted when the resource is changed
+   */
   ON_CHANGE: 'resourceChange',
 }

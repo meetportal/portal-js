@@ -1,7 +1,14 @@
 export const USER = {
-  // Methods
-  // GET_USER: 'getUser',
+  /**
+   * Sets the user to authenticate in the host application
+   */
   SET_USER: 'setUser',
-  // Events
+  /**
+   * Clears the user. Used for logging out of the host application
+   */
+  CLEAR_USER: 'clearUser',
+  /**
+   * Event emitted when the user is changed
+   */
   ON_CHANGE: 'userChange',
 }

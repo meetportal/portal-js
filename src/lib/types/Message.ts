@@ -8,7 +8,16 @@ export interface Message {
    * Determines the destination of the message. Generally, this is automatically set by the Portal.
    */
   appId?: string
+  /**
+   * External identifier for the message. This is used to track messages.
+   */
   externalId?: string
+  /**
+   * Group identifier for the message. This is used to group messages.
+   */
   groupId?: string
+  /**
+   * Payload for the message. This is the data that is sent to the application.
+   */
   data?: any
 }
