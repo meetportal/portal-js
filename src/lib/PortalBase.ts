@@ -86,7 +86,7 @@ export class Base implements PortalBase {
       let timer: any = null
       if (timeout) {
         timer = setTimeout(() => {
-          reject(new Error('timeout'))
+          reject(new Error('timeout on ' + path))
         }, timeout)
       }
       this.#requests.set(id, { path, timer, resolve, reject })
