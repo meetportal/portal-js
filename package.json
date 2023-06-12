@@ -1,6 +1,6 @@
 {
   "name": "@meetportal/portal-js",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "type": "module",
   "homepage": "https://meetportal.github.io/portal-js/",
   "repository": {
@@ -30,12 +30,12 @@
     "npm:dry-run": "npm publish --dry-run"
   },
   "devDependencies": {
-    "typescript": "^5.0.4",
-    "vite": "^4.3.5",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9",
     "vite-plugin-dts": "^2.3.0"
   },
   "dependencies": {
     "@orango/beam-client": "^0.1.4",
-    "typedoc": "^0.24.7"
+    "typedoc": "^0.24.8"
   }
 }

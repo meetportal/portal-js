@@ -42,6 +42,14 @@
   --dark-color-scheme: dark;
 }
 
+.tsd-page-navigation ul {
+  padding-left: 12px;
+}
+
+.tsd-navigation {
+  padding-bottom: 20px;
+}
+
 .tsd-page-title {
   display: none;
 }

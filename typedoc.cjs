@@ -7,7 +7,7 @@ module.exports = {
   sidebarLinks: {
     Github: 'https://github.com/meetportal/portal-js',
     Website: 'https://meetportal.com',
-    'Developer Console': 'https://marketplace.meetportal.com/developer',
+    // 'Developer Console': 'https://marketplace.meetportal.com/developer',
     'Getting Started': 'https://meetportal.com/developers/getting-started',
   },
   disableSources: true,
