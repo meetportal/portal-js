@@ -2,13 +2,9 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@meetportal/portal-js.svg?style=for-the-badge)](https://www.npmjs.com/package/@meetportal/portal-js)
 
-Portal is an **Operating System as a Service (OSaaS)** that runs on top of an application. It extends the host application by using background services and embedding external applications into the same workspace. Application can communicate with the hosting application through the Portal JS library.
+Portal is a platform that extends a website or online application with additional features using background services and external applications. Portal JS provides an API for applications and services to interact with Portal. Portal JS is designed to be used in any JavaScript or TypeScript application.
 
-# Portal JS
-
-Portal JS provides functionality for web applications integrating into Portal.
-
-[Portal JS API Documentation](https://meetportal.github.io/portal-js/) can be found here
+Users use Portal by installing the Portal browser extension or browser (in development). Portal can also be added to a website or online application by adding an additional Portal's hosting library to their website allowing users to use Portal without installing the browser extension or browser.
 
 ## Installation
 
