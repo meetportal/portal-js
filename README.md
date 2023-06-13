@@ -1,22 +1,8 @@
-![Portal Banner](https://meetportal.github.io/portal-js/media/portal_banner.png)
+![Portal Banner](https://meetportal.github.io/portal-js/media/portal-js-banner.svg)
 
-# What is Portal?
+[![NPM Version](https://img.shields.io/npm/v/@meetportal/portal-js.svg?style=for-the-badge)](https://www.npmjs.com/package/@meetportal/portal-js)
 
-Portal is an **Operating System as a Service (OSaaS)** that runs on top of an application. It extends the host application by using background services and embedding external applications into the same workspace. The host application, services and embedded applications all communicate with each other in real time. They share information as `resources`. This is accomplished by using a `request / response model` driven by a `permissions level security` architecture.
-
-# Why integrate your application into Portal?
-
-Portal handles the complexities of integrating into hosting applications for multiple industries. Portal integrates into primary applications for
-
-- [Construction](https://meetportal.github.io/projects-js/)
-- [DentalCare (EDR)](https://meetportal.github.io/dentalcare-js/)
-- [Education (SIS)](https://meetportal.github.io/learning-js/)
-- [HealthCare (EMR/EHR)](https://meetportal.github.io/healthcare-js/)
-- [Insurance (InsurTech)](https://meetportal.github.io/insurance-js/)
-- [Legal](https://meetportal.github.io/legal-js/)
-- more...
-
-This means you can integrate once into Portal and support multiple environments for one or more industries.
+Portal is an **Operating System as a Service (OSaaS)** that runs on top of an application. It extends the host application by using background services and embedding external applications into the same workspace. Application can communicate with the hosting application through the Portal JS library.
 
 # Portal JS
 
@@ -121,5 +107,18 @@ const unsubscribe = portal.subscribe(PortalEvent.URL_CHANGE, '*', (url: string) 
   unsubscribe()
 })
 ```
+
+# Additional resources
+
+Though you can use Portal JS directly, it is recommended to use one of the industry specific libraries. These libraries provide additional functionality for the industry they are designed for as well as standardize resources and events.
+
+- [Construction](https://meetportal.github.io/projects-js/)
+- [DentalCare (EDR)](https://meetportal.github.io/dentalcare-js/)
+- [Education (SIS)](https://meetportal.github.io/learning-js/)
+- [HealthCare (EMR/EHR)](https://meetportal.github.io/healthcare-js/)
+- [Insurance (InsurTech)](https://meetportal.github.io/insurance-js/)
+- [Legal](https://meetportal.github.io/legal-js/)
+
+If you have a suggestion for a new industry you would like to add, please [create an issue](https://github.com/meetportal/portal-js/issues) and let us know.
 
 <div class="footer">2023-present &copy; Orango, LLC. All rights reserved.</div>

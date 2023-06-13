@@ -19,19 +19,9 @@
 <div class="col-content">
 <div class="tsd-page-title">
 <h2>Portal JS</h2></div>
-<div class="tsd-panel tsd-typography"><p><img src="https://meetportal.github.io/portal-js/media/portal_banner.png" alt="Portal Banner"></p>
-<a id="md:what-is-portal" class="tsd-anchor"></a><h1><a href="#md:what-is-portal">What is Portal?</a></h1><p>Portal is an <strong>Operating System as a Service (OSaaS)</strong> that runs on top of an application. It extends the host application by using background services and embedding external applications into the same workspace. The host application, services and embedded applications all communicate with each other in real time. They share information as <code>resources</code>. This is accomplished by using a <code>request / response model</code> driven by a <code>permissions level security</code> architecture.</p>
-<a id="md:why-integrate-your-application-into-portal" class="tsd-anchor"></a><h1><a href="#md:why-integrate-your-application-into-portal">Why integrate your application into Portal?</a></h1><p>Portal handles the complexities of integrating into hosting applications for multiple industries. Portal integrates into primary applications for</p>
-<ul>
-<li><a href="https://meetportal.github.io/projects-js/">Construction</a></li>
-<li><a href="https://meetportal.github.io/dentalcare-js/">DentalCare (EDR)</a></li>
-<li><a href="https://meetportal.github.io/learning-js/">Education (SIS)</a></li>
-<li><a href="https://meetportal.github.io/healthcare-js/">HealthCare (EMR/EHR)</a></li>
-<li><a href="https://meetportal.github.io/insurance-js/">Insurance (InsurTech)</a></li>
-<li><a href="https://meetportal.github.io/legal-js/">Legal</a></li>
-<li>more...</li>
-</ul>
-<p>This means you can integrate once into Portal and support multiple environments for one or more industries.</p>
+<div class="tsd-panel tsd-typography"><p><img src="https://meetportal.github.io/portal-js/media/portal-js-banner.svg" alt="Portal Banner"></p>
+<p><a href="https://www.npmjs.com/package/@meetportal/portal-js"><img src="https://img.shields.io/npm/v/@meetportal/portal-js.svg?style=for-the-badge" alt="NPM Version"></a></p>
+<p>Portal is an <strong>Operating System as a Service (OSaaS)</strong> that runs on top of an application. It extends the host application by using background services and embedding external applications into the same workspace. Application can communicate with the hosting application through the Portal JS library.</p>
 <a id="md:portal-js" class="tsd-anchor"></a><h1><a href="#md:portal-js">Portal JS</a></h1><p>Portal JS provides functionality for web applications integrating into Portal.</p>
 <p><a href="https://meetportal.github.io/portal-js/">Portal JS API Documentation</a> can be found here</p>
 <a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><p>The recommended way for using Portal is to install it directly into your application.</p>
@@ -68,6 +58,16 @@
 </blockquote>
 <pre><code class="language-typescript"><span class="hl-8">import</span><span class="hl-1"> { </span><span class="hl-9">PortalEvent</span><span class="hl-1"> } </span><span class="hl-8">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@meetportal/portal-js&#39;</span><br/><br/><span class="hl-10">const</span><span class="hl-1"> </span><span class="hl-11">unsubscribe</span><span class="hl-1"> = </span><span class="hl-9">portal</span><span class="hl-1">.</span><span class="hl-0">subscribe</span><span class="hl-1">(</span><span class="hl-9">PortalEvent</span><span class="hl-1">.</span><span class="hl-11">URL_CHANGE</span><span class="hl-1">, </span><span class="hl-2">&#39;*&#39;</span><span class="hl-1">, (</span><span class="hl-9">url</span><span class="hl-1">: </span><span class="hl-13">string</span><span class="hl-1">) </span><span class="hl-10">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-9">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">&#39;url changed:&#39;</span><span class="hl-1">, </span><span class="hl-9">url</span><span class="hl-1">)</span><br/><span class="hl-1">  </span><span class="hl-0">unsubscribe</span><span class="hl-1">()</span><br/><span class="hl-1">})</span>
 </code><button>Copy</button></pre>
+<a id="md:additional-resources" class="tsd-anchor"></a><h1><a href="#md:additional-resources">Additional resources</a></h1><p>Though you can use Portal JS directly, it is recommended to use one of the industry specific libraries. These libraries provide additional functionality for the industry they are designed for as well as standardize resources and events.</p>
+<ul>
+<li><a href="https://meetportal.github.io/projects-js/">Construction</a></li>
+<li><a href="https://meetportal.github.io/dentalcare-js/">DentalCare (EDR)</a></li>
+<li><a href="https://meetportal.github.io/learning-js/">Education (SIS)</a></li>
+<li><a href="https://meetportal.github.io/healthcare-js/">HealthCare (EMR/EHR)</a></li>
+<li><a href="https://meetportal.github.io/insurance-js/">Insurance (InsurTech)</a></li>
+<li><a href="https://meetportal.github.io/legal-js/">Legal</a></li>
+</ul>
+<p>If you have a suggestion for a new industry you would like to add, please <a href="https://github.com/meetportal/portal-js/issues">create an issue</a> and let us know.</p>
 <div class="footer">2023-present &copy; Orango, LLC. All rights reserved.</div></div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -89,8 +89,6 @@
 <ul>
 <li>
 <ul>
-<li><a href="#md:what-is-portal"><span>What is <wbr/>Portal?</span></a></li>
-<li><a href="#md:why-integrate-your-application-into-portal"><span>Why integrate your application into <wbr/>Portal?</span></a></li>
 <li><a href="#md:portal-js"><span>Portal JS</span></a></li>
 <li>
 <ul>
@@ -102,7 +100,8 @@
 <li><a href="#md:using-portal-in-your-application"><span>Using <wbr/>Portal in your application</span></a></li>
 <li><a href="#md:create-a-portal-service"><span>Create a <wbr/>Portal service</span></a></li>
 <li><a href="#md:subscribe-to-events"><span>Subscribe to events</span></a></li>
-<li><a href="#md:using-subscribe-method"><span>Using subscribe method</span></a></li></ul></li></ul></li></ul></div></details></div>
+<li><a href="#md:using-subscribe-method"><span>Using subscribe method</span></a></li></ul></li>
+<li><a href="#md:additional-resources"><span>Additional resources</span></a></li></ul></li></ul></div></details></div>
 <div class="site-menu">
 <nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://github.com/meetportal/portal-js" target="_blank">Github</a><a href="https://meetportal.com" target="_blank">Website</a><a href="https://meetportal.com/developers/getting-started" target="_blank">Getting Started</a></nav>
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>Portal JS</span></a>
