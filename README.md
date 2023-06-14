@@ -2,9 +2,20 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@meetportal/portal-js.svg?style=for-the-badge)](https://www.npmjs.com/package/@meetportal/portal-js)
 
-Portal is a platform that extends a website or online application with additional features using background services and external applications. Portal JS provides an API for applications and services to interact with Portal. Portal JS is designed to be used in any JavaScript or TypeScript application.
+> Portal is currently in beta. If you would like to participate in the beta, please [contact us](https://meetportal.com/contact).
 
-Users use Portal by installing the Portal browser extension or browser (in development). Portal can also be added to a website or online application by adding an additional Portal's hosting library to their website allowing users to use Portal without installing the browser extension or browser.
+Portal improves your productivity and streamlines your browsing experience. With Portal, you can extends a website or online application with additional applications and services. Portal provides productivity applications enabling you to save time, improve your productivity. Portal JS provides an API for applications and services to interact with Portal. Portal JS is designed to be used in any JavaScript or TypeScript application. To learn more about Portal visit [meetportal.com](https://meetportal.com).
+
+## Full documentation
+
+For full documentation, please visit the [Portal library documentation](https://meetportal.github.io/portal-js/).
+
+## Features
+
+- Users can add bookmarks, notes, and tasks to any website or online application.
+- Users can extend a website or online application with additional applications and services available from [Portal's marketplace](https://marketplace.meetportal.com).
+- Developers can create applications and services that can be used in any website or online application, and can be distributed through the Portal Marketplace.
+- We welcome contributions from the community. We are a small team looking for help in building the future of the web. If you are interested in contributing, [join us on Slack!](https://meetportal.slack.com/)
 
 ## Installation
 
@@ -26,28 +37,19 @@ If you prefer, you can add Portal JS as a script in the head of your HTML page. 
 
 Portal JS provides an API that connects your application to Portal. You can perform actions and subscribe to events. JavaScript and TypeScript are both supported.
 
-## Using Portal in your application
+## Using Portal in an application
 
-Portal JS only works when inside a Portal environment. The application can perform a check using the helper below. This is useful when you want to change your application's UI based on it existing standalone or as a Portal application.
+The reference to Portal uses a `usePortalClient` singleton. This function will return a `PortalClient` object. This object provides the API for interfacing with Portal.
 
-```typescript
-import { inPortal } from '@meetportal/portal-js'
-
-if (inPortal) {
-  console.log('app is in portal')
-} else {
-  console.log('app is not in Portal')
-}
-```
-
-The reference to Portal uses a `usePortal` hook. This hook will return a `PortalClient` object. This object provides the API for interacting with Portal.
+> **Note:** The `usePortalClient` function is not a React hook. It is a singleton that returns the same object each time it is called.
 
 ```typescript
-import { inPortal, usePortal } from '@meetportal/portal-js'
+import { inPortal, usePortalClient } from '@meetportal/portal-js'
 
 async function main() {
+  // check if application is running in Portal before calling Portal JS functions
   if (inPortal) {
-    const response = await usePortal().echo('Hello, world!')
+    const response = await usePortalClient().echo('Hello, world!')
     console.log(response) // "Hello, world!"
   }
 }
@@ -55,18 +57,17 @@ async function main() {
 main()
 ```
 
-> **Note:** The `usePortal` is a singleton. It will only create one instance of the `PortalClient` object. This means your application can call `usePortal` from anywhere and it will always return the same object.
-
 ## Create a Portal service
 
-Portal can run code as a background service. Each service runs as a independent web worker. Portal services are useful when you want to subscribe to events or perform actions without the need of a user interface (UI). Services are always running unlike applications which only run when they are open.
+Portal can also run code as a background service. Each service runs as a independent web worker. Portal services are useful when you want to subscribe to events or perform actions without relying on an application being in an open state. Services are always running unlike applications which only run when they are open. These services can be registered alongside an application or standalone.
+
+Portal provides a [starter kit for creating a service](https://github.com/meetportal/portal-service-starter). The starter kit provides a template for creating a service. It also provides a `build` script that will compile your service to host on the web.
 
 ```typescript
 import { usePortalService } from '@meetportal/portal-js'
 
 async function main() {
-  const service = usePortalService()
-  const response = await service.echo('Hello, world!')
+  const response = await usePortalService().echo('Hello, world!')
   console.log(response) // "Hello, world!"
 }
 
@@ -75,19 +76,23 @@ main()
 
 ## Subscribe to events
 
-There are many events Portal provides as part of the API. These events do not require any additional permissions. The events will differ between a Portal Application and Service, so refer to the documentation.
+There are many events Portal provides as part of the API. These events may require any additional permissions. Events will differ between an application and service, so refer to the documentation.
+
+_Example of subscribing to Portal in an application_
 
 ```typescript
-import { Resource } from '@meetportal/portal-js'
+import { Resource, usePortalClient } from '@meetportal/portal-js'
 
-portal.onResourceChange('customer', (resource?: Resource) => {
-  console.log('customer changed', resource)
+const unsubscribe = usePortalClient().onResourceChange('customer', (resource?: Resource) => {
+  // subscribing to an event will immediately return the current value
+  console.log('customer changed --', resource)
+  if (resource) {
+    console.log('customer id:', resource.id)
+    // you can use the unsubscribe function to stop listening to events
+    unsubscribe()
+  }
 })
 ```
-
-> **Note:** All events that are subscribed to will immediately return the current value on initialization.
-
-> **Note:** All event subscriptions will return an `unsubscribe` function. This function can be called to unsubscribe from the event.
 
 ## Using subscribe method
 
@@ -95,18 +100,26 @@ You can subscribe to additional Portal events. These events may require permissi
 
 > **Note:** The `subscribe` events differ between the PortalClient and PortalService.
 
-```typescript
-import { PortalEvent } from '@meetportal/portal-js'
+_Example of subscribing to Portal in a service_
 
-const unsubscribe = portal.subscribe(PortalEvent.URL_CHANGE, '*', (url: string) => {
-  console.log('url changed:', url)
-  unsubscribe()
+```typescript
+import { PortalEvent, usePortalService } from '@meetportal/portal-js'
+
+const unsubscribe = usePortalService().subscribe(PortalEvent.URL_CHANGE, '*', (url: string) => {
+  // subscribing to an event will immediately return the current value
+  console.log('url changed --', url)
+  if (url === 'https://example.com') {
+    // you can use the unsubscribe function to stop listening to events
+    unsubscribe()
+  }
 })
 ```
 
-# Additional resources
+# Would you like to use Portal for a specific industry?
 
-Though you can use Portal JS directly, it is recommended to use one of the industry specific libraries. These libraries provide additional functionality for the industry they are designed for as well as standardize resources and events.
+We have created industry specific libraries that extend Portal JS. These are designed to be used in specific industries in order to provide standardization and additional functionality.
+
+These libraries are currently in beta. If you would like to contribute to these libraries or add a new one feel free to fork the repository and submit a pull request. Don't forget to [join us on Slack!](https://meetportal.slack.com/)
 
 - [Construction](https://meetportal.github.io/projects-js/)
 - [DentalCare (EDR)](https://meetportal.github.io/dentalcare-js/)
@@ -117,4 +130,6 @@ Though you can use Portal JS directly, it is recommended to use one of the indus
 
 If you have a suggestion for a new industry you would like to add, please [create an issue](https://github.com/meetportal/portal-js/issues) and let us know.
 
-<div class="footer">2023-present &copy; Orango, LLC. All rights reserved.</div>
+# Contributing
+
+We welcome contributions from the community. We are a small team looking for help in building the future of the web. If you are interested in contributing, [join us on Slack!](https://meetportal.slack.com/)
